@@ -33,6 +33,14 @@ Vamos a realizar la demostración por inducción,
 
 Para $n=2$
 
+$$
+\begin{array}{rcl}
+\mid z^2 \mid & = & \mid z z \mid \\
+ & = & \mid z \mid\mid z \mid \text{, por la propiedad anterior}\\
+ & = & \mid z \mid^2 \\
+\end{array}
+$$
+
 Supongamos que se cumple para $n=k$ que $\mid z^k \mid = \mid z \mid^k$
 
 Para $n=k+1$
