@@ -1,0 +1,46 @@
+\mainmatter
+
+# Introducción 
+
+## Plano Complejo
+
+```{definition}
+El plano complejo o cuerpo de un número complejo es el conjunto siguiente
+
+\begin{equation}
+\mathbb{C} =\{ (x,y) : x,y \in \mathbb R\}
+\end{equation}
+
+Con las operaciones
+
+- Suma: $(x_1,y_1) + (x_2,y_2) = (x_1+x_2,y_1 +y_2)$.
+
+- Producto escalar $\lambda (x,y) \ne (\lambda x,\lambda y)$
+
+- Producto $(x_1,y_1) (x_2,y_2) = (x_1x_2 - y_1y_2,y_1 +y_2)$
+  
+```
+
+Haciendo la identificación 
+
+$$
+\left \{ 
+\begin{array}{rcl}
+1 & = & (1,0)\\
+0 & = & (0,1)
+\end{array}
+\right.
+$$
+
+Si $(x,y)\in \mathbb C$ entonces $(x,y)=x(1,0)+y(0,1)=x+iy$
+
+Tenemos que
+
+$$
+\begin{array}{rcl}
+i^2 & = & i i\\
+& = & (0,1)(0,1)\\
+=(-1,0)=-1\\
+(x_1,y_1) (x_2,y_2) & = & (x_1+iy_1)(x_2+iy_2)
+\end{array}
+$$
