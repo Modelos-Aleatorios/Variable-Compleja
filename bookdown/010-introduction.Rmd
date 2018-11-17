@@ -18,7 +18,6 @@ Con las operaciones
 - Producto escalar $\lambda (x,y) \ne (\lambda x,\lambda y)$
 
 - Producto $(x_1,y_1) (x_2,y_2) = (x_1x_2 - y_1y_2,y_1 +y_2)$
-  
 ```
 
 Haciendo la identificación 
@@ -40,7 +39,70 @@ $$
 \begin{array}{rcl}
 i^2 & = & i i\\
 & = & (0,1)(0,1)\\
-=(-1,0)=-1\\
-(x_1,y_1) (x_2,y_2) & = & (x_1+iy_1)(x_2+iy_2)
+& = & (0+i1)(0+i1)\\
+& = & 0\times 0+ 0\times i1+ i1\times 0+ i1\times i1\\
+& = & 0+ 0+ 0+ i \times i\\
+& = & -1\\
+& = & (-1,0)\\
+i^2 & = & -1
 \end{array}
 $$
+
+Y por otra parte
+
+$$
+\begin{array}{rcl}
+(x_1,y_1) (x_2,y_2) & = & (x_1+iy_1)(x_2+iy_2)\\
+& = & x_1 x_2 +  x_1 i y_2 + i y_1 x_2+ i^2 y_1 y_2\\
+& = & x_1 x_2 +  i (x_1 y_2 + y_1 x_2) + i^2 y_1 y_2\\
+& = & x_1 x_2 +  i (x_1 y_2 + y_1 x_2) - y_1 y_2\\
+& = & x_1 x_2 - y_1 y_2 +  i (x_1 y_2 + y_1 x_2) \\
+(x_1,y_1) (x_2,y_2) & = & (x_1 x_2 - y_1 y_2, x_1 y_2 + y_1 x_2)
+\end{array}
+$$
+
+Representación del plano complejo
+
+```{r, echo=FALSE}
+data <- data.frame( x = 2, y = 4)
+
+ggplot(data, aes(x,y, fill=y))+
+  geom_curve( aes(x = 0, y = -0.5, xend = 0, yend = 5), arrow = arrow(length = unit(0.03, "npc")),curvature = 0, size=0.6)+
+  geom_curve( aes(x = -0.5, y = 0, xend = 3, yend = 0), arrow = arrow(length = unit(0.03, "npc")),curvature = 0, size=0.6)+
+  geom_curve( aes(x = 2, y = 0, xend = 2, yend = 4), curvature = 0, size=0.6, color="blue")+
+  geom_curve( aes(x = 0, y = 4, xend = 2, yend = 4), curvature = 0, size=0.6, color="blue")+
+  geom_point()+
+  annotate( "text", x = 2.2, y = 4.2, col="black", label = paste("x+iy"), parse = TRUE, size=5)+ 
+  annotate( "text", x = 2, y = -0.2, col="black", label = "x", parse = TRUE, size=5)+ 
+  annotate( "text", x = -0.1, y = 4, col="black", label = "y", parse = TRUE, size=5)+ 
+  annotate( "text", x = 3.1, y = 0, col="black", label = "R", parse = TRUE, size=5)+ 
+  annotate( "text", x = 0, y = 5.2, col="black", label = "i", parse = TRUE, size=5)+ 
+  guides(fill=FALSE)+
+  theme( plot.title = element_text(face= "bold", colour= "black", size=10),
+         axis.title.x=element_text(face= "bold", colour= "black", size=6),
+         axis.title.y=element_text(face= "bold", colour= "black", size=6),
+         axis.text.y=element_blank(), axis.ticks.y =element_blank(),
+         axis.text.x=element_blank(), axis.ticks.x =element_blank())+
+  labs(title = "Plano Complejo", x="Eje Real", y="Eje Imaginario")
+```
+
+De ahora en adelante denotaremos a cualquier número complejo $z\in \mathbb C$ como $z=x+iy$ donde $x,y \in \mathbb R$,  $x=\text{Re}(z)$ es la parte real y $y=\text{Im}(z)$ es la parte imaginaria.
+
+```{definition}
+El __modulo__ de un número complejo, se define como
+
+$$|z|=(x^2+y^2)^{1/2}$$
+```
+
+Este nos representa el tamaño del vector que que tiene como origen el punto $(0,0)$ y destino el punto $(x,y)$.
+
+```{definition}
+El __conjugado__ de un número complejo $z=x+iy$, se define como
+
+$$\overline{z}=x-iy$$
+```
+
+El conjugado de cualquier número complejo es el relejo con respecto al eje real.
+
+
+
