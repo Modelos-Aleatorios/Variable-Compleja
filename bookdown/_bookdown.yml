@@ -15,9 +15,9 @@ language:
     prp: 'Proposición '
     exm: 'Ejemplo '
     exr: 'Ejercicio '
-    proof: 'Demostración. '
-    remark: 'Nota. '
-    solution: 'Solución. '
+    proof: 'Demostración: '
+    remark: 'Nota: '
+    solution: 'Solución: '
   ui:
     edit: Edit
     chapter_name: 'Capítulo '

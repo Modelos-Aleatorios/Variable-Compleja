@@ -2,64 +2,6 @@
 
 # Introducción 
 
-## Proposiciones
-
-Sean $z, w \in \mathbb{C}$, $z=(x_1, y_1)$, $w=(x_2, y_2)$ y $\mid z \mid = (x_1^2+y_1^2)^{\frac{1}{2}}$
-
-```{proposition}
-$\mid zw\mid = \mid z \mid \mid w\mid$
-```
-
-$$
-\begin{array}{rcl}
-\mid zw\mid & = & \mid (x_1, y_1)(x_2, y_2)\mid\\ 
- & = & \mid x_1x_2 + ix_1y_2 + iy_1x_2 - y_1y_2 \mid\\ 
- & = & \mid (x_1x_2 - y_1y_2 + ix_1y_2 + iy_1x_2) \mid\\ 
- & = & \mid (x_1x_2 - y_1y_2, x_1y_2 + y_1x_2) \mid\\ 
- & = & ( (x_1x_2 - y_1y_2)^2 + (x_1y_2 + y_1x_2)^2)^{\frac{1}{2}}\\ 
- & = & ( x_1^2x_2^2 - 2x_1x_2y_1y_2 + y_1^2y_2^2 + x_1^2y_2^2 + 2x_1y_2y_1x_2+ y_1^2x_2^2)^{\frac{1}{2}}\\ 
- & = & ( x_1^2(x_2^2+y_2^2) + y_1^2(x_2^2+y_2^2))^{\frac{1}{2}}\\ 
- & = & ( (x_1^2+y_1^2)(x_2^2+y_2^2))^{\frac{1}{2}}\\ 
- & = & (x_1^2+y_1^2)^{\frac{1}{2}}(x_2^2+y_2^2)^{\frac{1}{2}}\\  
-\mid zw\mid & = & \mid z \mid \mid w\mid
-\end{array}
-$$
-
-```{proposition}
-$\mid z^n \mid = \mid z \mid^n$
-```
-
-Vamos a realizar la demostración por inducción, 
-
-Para $n=2$
-
-$$
-\begin{array}{rcl}
-\mid z^2 \mid & = & \mid z z \mid \\
- & = & \mid z \mid\mid z \mid \text{, por la propiedad anterior}\\
- & = & \mid z \mid^2 \\
-\end{array}
-$$
-
-Supongamos que se cumple para $n=k$ que $\mid z^k \mid = \mid z \mid^k$
-
-Para $n=k+1$
-
-$$
-\begin{array}{rcl}
-\mid z^{k+1} \mid & = & \mid z^kz \mid \\
- & = & \mid z^kz \mid\\
- & = & \mid z^k\mid \mid z \mid \text{, por la proiedad anterior} \\
- & = & \mid z\mid^k \mid z \mid \text{, por la hipó tesis inductiva}\\
- & = & \mid z\mid^{k+1}\\
-\end{array}
-$$
-
-```{proposition}
-$\mid z \bar{z} \mid = \mid z \mid^2$
-```
 
 
-```{proposition}
-Sea $z\ne 0$, $\displaystyle \frac{1}{z} = \displaystyle \frac{\bar{z}}{\mid z \mid^2}$
-```
+
